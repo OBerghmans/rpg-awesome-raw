@@ -1,7 +1,7 @@
 Raw SVG icons for RPG-Awesome
 =============================
 
-These are the raw SVG files used to generate new font files for [RPG Awesome](https://github.com/nagoshiashumari/Rpg-Awesome).
+These are the raw SVG files used to generate font files and SCSS partials for [RPG Awesome](https://github.com/OpenDominion/Rpg-Awesome), a fork of the original [RPG Awesome](https://github.com/nagoshiashumari/Rpg-Awesome) by Daniela Howe and Ivan Montiel.
 
 
 # Adding New Icons
@@ -26,3 +26,32 @@ Once the Preferences are set, click Download. You will receive a ZIP file. In it
 * `zip/fonts` => `rpg-awesome/fonts`
 
 You will need to manually copy and paste the contents of `zip/variables.scss` into `rpg-awesome/scss/_variables.scss`, overwritting the old `ra-var-icon` variables.
+
+
+# Building Assets (Automated)
+
+Assets are generated using [icomoon-cli](https://www.npmjs.com/package/icomoon-cli) and consist of:
+
+* `fonts/` — web font files (eot, ttf, woff, svg)
+* `scss/_variables.scss` — Sass icon variables (e.g. `$ra-sword: '\e900';`)
+* `scss/_icons.scss` — Sass CSS class definitions
+
+## Releasing
+
+Push a version tag to trigger the GitHub Actions workflow. It will build all assets and attach them to a GitHub Release automatically:
+
+```bash
+git tag v0.0.19
+git push origin v0.0.19
+```
+
+The generated files can then be downloaded from the [Releases](https://github.com/OpenDominion/rpg-awesome-raw/releases) page.
+
+## Running locally
+
+Docker and Docker Compose are required. The output will be placed in `dist/`.
+
+```bash
+mkdir -p output dist
+docker compose up --build
+```
