@@ -36,9 +36,11 @@ Assets are generated using [icomoon-cli](https://www.npmjs.com/package/icomoon-c
 * `scss/_variables.scss` — Sass icon variables (e.g. `$ra-sword: '\e900';`)
 * `scss/_icons.scss` — Sass CSS class definitions
 
-## Releasing
+## Steps
 
-Push a version tag to trigger the GitHub Actions workflow. It will build all assets and attach them to a GitHub Release automatically:
+1. Add your SVG file(s) to the `/Font` folder
+2. Commit and push your changes
+3. Create and push a version tag — this triggers the GitHub Actions workflow, which builds all assets and attaches them to a GitHub Release automatically:
 
 ```bash
 git tag v0.0.19
@@ -49,7 +51,7 @@ The generated files can then be downloaded from the [Releases](https://github.co
 
 ## Running locally
 
-Docker and Docker Compose are required. The output will be placed in `dist/`.
+To preview the output before releasing, Docker and Docker Compose are required. The output will be placed in `dist/`.
 
 ```bash
 mkdir -p output dist
