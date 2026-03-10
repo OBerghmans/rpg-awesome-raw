@@ -1,0 +1,29 @@
+name: Generate Assets
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Generate assets
+        run: mkdir -p output dist && docker compose up --build --exit-code-from icomoon
+
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/fonts/rpgawesome-webfont.eot
+            dist/fonts/rpgawesome-webfont.ttf
+            dist/fonts/rpgawesome-webfont.woff
+            dist/fonts/rpgawesome-webfont.svg
+            dist/scss/_variables.scss
+            dist/scss/_icons.scss

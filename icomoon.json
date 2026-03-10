@@ -1,0 +1,53 @@
+{
+  "IcoMoonType": "selection",
+  "icons": [],
+  "height": 1024,
+  "metadata": {
+    "name": "rpgawesome-webfont",
+    "url": "https://github.com/OpenDominion/Rpg-Awesome"
+  },
+  "preferences": {
+    "showGlyphs": true,
+    "showQuickUse": true,
+    "showQuickUse2": true,
+    "showSVGs": true,
+    "fontPref": {
+      "prefix": "ra-",
+      "metadata": {
+        "fontFamily": "rpgawesome-webfont",
+        "majorVersion": 1,
+        "minorVersion": 0,
+        "fontURL": "https://github.com/OpenDominion/Rpg-Awesome"
+      },
+      "metrics": {
+        "emSize": 1024,
+        "baseline": 6.25,
+        "whitespace": 50
+      },
+      "embed": false,
+      "postfix": "",
+      "ie7": false,
+      "noie8": false,
+      "includeMetadata": true,
+      "cssVars": true,
+      "cssVarsFormat": "scss_new",
+      "showMetadata": true
+    },
+    "imagePref": {
+      "prefix": "icon-",
+      "png": true,
+      "useClassSelector": true,
+      "color": 0,
+      "bgColor": 16777215,
+      "classSelector": ".icon",
+      "name": "rpgawesome-webfont",
+      "height": 32,
+      "columns": 16,
+      "margin": 16,
+      "postfix": "ra-"
+    },
+    "historySize": 50,
+    "showCodes": true,
+    "gridSize": 16
+  }
+}

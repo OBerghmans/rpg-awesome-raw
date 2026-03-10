@@ -1,1 +1,4 @@
 .DS_Store
+output/
+dist/
+icomoon-lock.json
