@@ -1,0 +1,14 @@
+services:
+  icomoon:
+    build: ./docker
+    # Chrome requires SYS_ADMIN or --no-sandbox when running in Docker
+    cap_add:
+      - SYS_ADMIN
+    shm_size: '1gb'
+    environment:
+      - RA_VERSION
+    volumes:
+      - ./Font:/app/Font:ro
+      - ./icomoon.json:/app/icomoon.json:ro
+      - ./output:/app/output-mount
+      - ./dist:/app/dist-mount
