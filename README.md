@@ -43,8 +43,8 @@ Assets are generated using [icomoon-cli](https://www.npmjs.com/package/icomoon-c
 3. Create and push a version tag — this triggers the GitHub Actions workflow, which builds all assets and attaches them to a GitHub Release automatically:
 
 ```bash
-git tag v0.0.19
-git push origin v0.0.19
+git tag v0.0.21
+git push origin v0.0.21
 ```
 
 The generated files can then be downloaded from the [Releases](https://github.com/OpenDominion/rpg-awesome-raw/releases) page.

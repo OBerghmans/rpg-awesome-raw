@@ -31,7 +31,7 @@ const variablesHeader = `// Variables
 
 $ra-font-path:        '../fonts' !default;
 $ra-css-prefix:       ra !default;
-$ra-version:          '0.0.15' !default;
+$ra-version:          '${(process.env.RA_VERSION || 'dev').replace(/^v/, '')}' !default;
 $ra-border-color:     #eee !default;
 $ra-inverse:          #fff !default;
 $ra-li-width:         (30em / 14) !default;
